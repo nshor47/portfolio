@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Information</title>
+    <title>Contact</title>
 </head>
 <body>
-    <h1>Contact Information</h1>
+    <h1>Contact</h1>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects/index.html">Projects</a></li>
-            <li><a href="contact/index.html">Contact</a></li>
+            <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/projects/index.html">Projects</a></li>
+            <li><a href="http://127.0.0.1:5500/contact/index.html">Contact</a></li>
+            <li><a href="http://127.0.0.1:5500/resume/index.html">Resume</a></li>
             <li><a href="https://github.com/nshor47" target="_blank">GitHub</a></li>
         </ul>
     </nav>
+    <form action="mailto:nshor@ucsd.edu" method="POST" enctype="text/plain">
+        <label for="email">Email:</label>
+        <input type="email" name="email">
+
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject">
+
+        <label for="body">Body:</label>
+        <textarea name="body"></textarea>
+
+        <button>Submit</button>
+    </form>
+
 </body>
 </html>
