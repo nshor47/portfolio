@@ -1,6 +1,12 @@
 :root {
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
+  --color-bg: #f4f4f4
+  --color-header-bg: #fff; 
+  --color-nav-bg: #333; 
+  --color-nav-text: #fff; 
+  --color-footer-bg: #fff; 
+  --color-footer-text: #333; 
 }
 
 body {
@@ -8,6 +14,7 @@ body {
     font: 100%/1.5 system-ui;
     margin-inline: auto;
     padding: 20px;
+    background-color: var(--color-bg);
   }
 
 img {
@@ -25,9 +32,7 @@ nav ul li {
 nav {
   display: flex ;
   margin-bottom: 2ch;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom: 1px solid oklch(80% 3% 200);
 }
 
 nav a {
@@ -77,6 +82,10 @@ button {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
+  background-color: var(--color-header-bg);
+  padding: 15px; 
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .projects article h2 {
@@ -87,14 +96,78 @@ h1 {
   font-size: calc(300%);
   line-height: 1.1;
   text-wrap: balance;
+  text-align: center; 
 }
 
 h2 {
+  font-size: 2em; 
   line-height: 1.1;
   text-wrap: balance;
+  margin: 20px 0 10px; 
+  border-bottom: 2px solid oklch(80% 3% 200); 
+  padding-bottom: 5px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
+}
+
+footer {
+  text-align: center; 
+  padding: 20px 0; 
+  background-color: var(--color-footer-bg); 
+  color: var(--color-footer-text);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0; 
+}
+
+.resume-section {
+  text-align: center;
+}
+
+.resume-section nav {
+  justify-content: center;
+}
+
+.resume-section h2 {
+  margin: 20px 0 10px;
+  border-bottom: 2px solid oklch(80% 3% 200); 
+  padding-bottom: 5px; 
+}
+
+.resume-section article {
+  text-align: left;
+  background-color: white;
+  border: 1px solid oklch(80% 3% 200);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section article h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.resume-section article p {
+  margin: 5px 0;
+}
+
+a {
+  color: oklch(40% 30% 200);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: oklch(65% 50% 10);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
