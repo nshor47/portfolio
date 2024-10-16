@@ -7,6 +7,8 @@
   --color-nav-text: #fff; 
   --color-footer-bg: #fff; 
   --color-footer-text: #333; 
+  /* color-scheme: dark; */
+  --border-color: oklch(50% 10% 200 / 40%);
 }
 
 body {
@@ -33,6 +35,8 @@ nav {
   display: flex ;
   margin-bottom: 2ch;
   border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom-color: var(--border-color);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 95%);
 }
 
 nav a {
@@ -116,8 +120,8 @@ h1, h2, h3, h4, h5, h6 {
 footer {
   text-align: center; 
   padding: 20px 0; 
-  background-color: var(--color-footer-bg); 
-  color: var(--color-footer-text);
+  /* background-color: var(--color-footer-bg);  */
+  /* color: var(--color-footer-text); */
   position: relative;
   bottom: 0;
   width: 100%;
@@ -143,7 +147,6 @@ footer p {
 
 .resume-section article {
   text-align: left;
-  background-color: white;
   border: 1px solid oklch(80% 3% 200);
   border-radius: 8px;
   padding: 15px;
@@ -172,3 +175,25 @@ a:hover {
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 /* Used chatgpt to come up with new ideas for page customization such as text-shadow, hover features, and transition effects */
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #121212;
+  --color-header-bg: #1e1e1e;
+  --color-nav-bg: #333;
+  --color-nav-text: #fff;
+  --color-footer-bg: #1e1e1e;
+  --color-footer-text: #bbb;
+  --border-color: oklch(50% 10% 200 / 40%);
+}
+
+body[data-theme='dark'] {
+  background-color: var(--color-bg);
+}
