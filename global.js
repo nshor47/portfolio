@@ -78,7 +78,7 @@ form?.addEventListener('submit', function (event) {
 
     const data = new FormData(form);
 
-    let url = form.action + '?';
+    let url = form.action + '?'; 
 
     
     const params = []; 
